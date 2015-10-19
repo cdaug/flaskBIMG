@@ -1,0 +1,40 @@
+{% set menu = 'main' %}
+{% set selected = 'game' %}
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <main>
+    <p class="scoreOne"></p>
+    <p class="scoreTwo"></p>
+    <div class="messageboard"></div>
+    <div class="bodywidth">---------------------------------------------------------------------------------------------------------------------------------------------------</div>
+    <br>
+    <img class="card4" src="{{url_for('static', filename='img/backofbriscolacard.jpg')}}" data-id=0 height="175">
+    <img class="card5" src="{{url_for('static', filename='img/backofbriscolacard.jpg')}}" data-id=0 height="175">
+    <img class="card6" src="{{url_for('static', filename='img/backofbriscolacard.jpg')}}" data-id=0 height="175">
+    <br>
+    <br>
+    <img class="playerTwoPlayerCard" height="125" width="75"><img class="trump" src="{{url_for('static', filename='img/backofbriscolacard.jpg')}}" data-id=0 height="125"><img class="playerOnePlayerCard" height="125" width="75">
+    <br>
+    <br>
+    <div class="cards">
+    <img class="card1" src="{{url_for('static', filename='img/backofbriscolacard.jpg')}}" data-id=0 height="175">
+    <img class="card2" src="{{url_for('static', filename='img/backofbriscolacard.jpg')}}" data-id=0 height="175">
+    <img class="card3" src="{{url_for('static', filename='img/backofbriscolacard.jpg')}}" data-id=0 height="175">
+    </div>
+    <button id="getCards">Start Game</button>
+    <br>
+  </main>
+{% endblock %}
+{% block footer %}
+  {{ super() }}
+  <script src="{{url_for('static', filename='script/eventemitter2.js')}}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.0/lodash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/velocity/1.2.2/velocity.min.js"></script>
+  <!--<script src="briscolaGraphical.js"></script>-->
+  <script src="{{url_for('static', filename='script/briscolaGraphicalAndText.js')}}"></script>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% set menu = 'main' %}
+{% set selected = 'readings' %}
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <main>
+
+    <h3>Reading Lists!</h3>
+    <p>So these are some books that I have read recently and think that you should give a read as well. They are pretty awesome.</p>
+  <div id="bookshelf">
+    <span itemscope itemtype="schema.org/Book"><a href="{{url_for('iliad')}}" title="Iliad by Homer">
+      <picture>
+        <source
+        media="(orientation: landscape)"
+        srcset="http://www.iliadtranslation.com/images/ou-cover.gif"
+         />
+        <img class="books"src="https://georgemacyimagery.files.wordpress.com/2011/10/dsc_0033.jpg" alt="The cover of the Iliad by Homer, with a warrior's helmet." height="375"></img>
+      </picture>
+    </a>
+  </span>
+
+    <span itemscope itemtype="schema.org/Book"><a href="{{url_for('odyssey')}}" title="The Odyssey by Homer">
+      <picture>
+        <source
+        media="(orientation: landscape)"
+        srcset="http://i43.tower.com/images/mm100644304/odyssey-homer-barbara-leonie-picard-paperback-cover-art.jpg"
+         />
+      <img class="books"src="https://georgemacyimagery.files.wordpress.com/2011/12/dsc_0039.jpg" alt="The cover of the Odyssey by Homer, with the monster Skylla attacking the ship of Odysseus, and the waves of Charybdis making it stormy." height="375"></img>
+    </picture>
+    </a>
+  </span>
+
+  <span itemscope itemtype="schema.org/Book"><a href="{{url_for('night')}}" title="Night by Elie Wiesel">
+      <picture>
+        <source
+        media="(orientation: landscape)"
+        srcset="http://ecx.images-amazon.com/images/I/41kkT0WKkXL.jpg"
+         />
+      <img class="books"src="books/img/night.jpg" alt="The cover of Night by Elie Wiesel, with some black border around a white space and a barb wire going through it." height="375"></img>
+    </picture>
+    </a>
+  </span>
+
+  <span itemscope itemtype="schema.org/Book"><a href="{{url_for('donquixote')}}" title="Don Quixote by Cervantes">
+      <picture>
+        <source
+        media="(orientation: landscape)"
+        srcset="http://www.fdungan.com/quixote.gif"
+         />
+      <img class="books" src="books/img/donquixote.jpg" alt="The cover of Don Quixote by Cervantes with Don Quixote sitting on his horse and his squire riding alongside with him, listening to him tell his story." height="375"></img>
+    </picture>
+      </a>
+  </span>
+
+  <span itemscope itemtype="schema.org/Book"><a href="{{url_for('aenied')}}" title="Aenied by Virgil">
+      <picture>
+        <source
+        media="(orientation: landscape)"
+        srcset="http://www.vibebookstore.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/T/h/The_Aeneid_cover.jpg.jpg"
+         />
+      <img class="books"src="books/img/aeneid.jpg" alt="The cover of the Aeneid by Virgil with a Trojan warrior ducking down with his spear being prepared to be thrown." height="375"></img>
+    </picture>
+    </a>
+
+  <!-- <span itemscope itemtype="schema.org/Book"><a href="books/my_stories.html" title="A small collection of my own books/stories that I wrote and then slowly forgot about.">
+    <picture>
+      <source
+      media="(orientation: landscape)"
+      srcset="books/img/my_cover.png"
+       />
+      <img class="books" src="books/img/my_book_spine.png" alt="The cover of my book collections. It isn't very interesting. I don't know why. Maybe it is because I didn't spend much time on it." height="375"></img>
+    </picture>
+    </a>
+  </span> -->
+  </div>
+  </main>
+{% endblock %}
+{% block footer %}
+  {{ super() }}
+{% endblock %}

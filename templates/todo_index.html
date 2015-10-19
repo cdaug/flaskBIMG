@@ -1,0 +1,32 @@
+{% set menu = 'main' %}
+{% set selected = 'todo' %}
+{% extends "base.html" %}
+
+{% block title %}- Todolist{% endblock %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+  <main>
+
+    <input id="add_list_input" autofocus="true" placeholder="Add An Item To Do"></input><button id="add_list_button">Add</button>
+    <ul id="todolist" class="cdi-ul">
+      <script id="todolisttemplate" type="text/x-handlebars-template">
+        <li><i class="unchecked check_list_item cdi cdi-lg cdi-circle-o"></i><span class="todolist_item">{{this}}</span><i  class="remove_list cdi cdi-lg cdi-times-circle"></i></li>
+      </script>
+    </ul>
+
+  </main>
+{% endblock %}
+
+{% block footer %}
+  {{ super() }}
+  <script src="{{url_for('static', filename='script/eventemitter2.js')}}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.1/handlebars.runtime.min.js"></script>
+  <script src="{{url_for('static', filename='script/test.js')}}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.0.7/dragula.min.js"></script>
+  <script src="{{url_for('static', filename='script/todolist.js')}}"></script>
+{% endblock %}

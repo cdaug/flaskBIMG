@@ -1,0 +1,23 @@
+{% set menu = 'main' %}
+{% set selected = 'portfolio' %}
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <main>
+
+    <h1>Portfolio</h1>
+    <p>So yeah this is my portfolio. These are some random projects but hey, they are still cool.</p>
+    <p><strong>WARNING</strong>-- Little Page may not work as well as it could in mobile... In other words... It looks bad.</p>
+
+    <a href="projects/hangman.html" title="Hangman"><img src="https://wordsofwyatt.files.wordpress.com/2013/06/hangman.jpg" alt="hangman" width="100px" height="100px"></img></a>
+
+    <a href="file:///media/colin/B795-92A7/code/smallpage.html" title="Little Page"><img src="img/nope.png" alt="Little Page" width="100px" height="100px"></img></a>
+
+  </main>
+{% endblock %}
+{% block footer %}
+  {{ super() }}
+{% endblock %}

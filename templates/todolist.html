@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}- Todo List{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <input id="add_list_input" autofocus="true" placeholder="Add An Item To Do"></input><button id="add_list_button">Add</button>
+  <ul id="todolist"></ul>
+  <div id="somethingrandom"></div>
+
+  <script id="entry-template" type="text/x-handlebars-template">
+    <div class="entry">
+      <h1> {{ testingtitle }} </h1>
+      <div class="body">
+        {{ anotherbodytest }}
+      </div>
+    </div>
+  </script>
+
+{% endblock %}
+{% block footer %}
+  {{ super() }}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.0.7/dragula.min.js"></script>
+  <script src="{{url_for('static', filename='script/todolist.js')}}"></script>
+{% endblock %}

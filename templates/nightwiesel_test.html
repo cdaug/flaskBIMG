@@ -1,0 +1,21 @@
+{% set menu = 'book' %}
+{% set selected = 'night' %}
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <main>
+    <h3>Night, by Elie Wiesel</h3>
+
+    <p>This book is about the Holocaust. Specifically it follows the story of Elie Wiezel, when he was forced to take part in it. He is a Jew and the Germans imprisoned, tortured, and worked the Jews to death. This story is very powerful, but at the same time very changing. It will change your thoughts about any religion and will make you question your own faith. You can either overcome, and have your faith be stronger, but at the same time you could just as easily fail and think that there could be no God who loves us that would allow this to happen.</p>
+
+    <p>This book is very powerful and I rate it <strong>ten out of ten again.</strong> However be warned. Your faith will most likely change in some way after reading this book.</p>
+
+    <span itemscope itemtype="schema.org/BuyAction"><p>You can get this book off of Amazon <a href="http://www.amazon.com/Night-Elie-Wiesel/dp/0374500010/ref=sr_1_1?s=books&ie=UTF8&qid=1432315409&sr=1-1&keywords=elie+wiesel+night">here.</a></span>
+  </main>
+{% endblock %}
+{% block footer %}
+  {{ super() }}
+{% endblock %}

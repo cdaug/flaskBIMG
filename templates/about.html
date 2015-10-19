@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Colin Site</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='colinsite.css')}}">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat|Lato:400,700,400italic,900' rel='stylesheet' type='text/css'>
+  <script src="{{url_for('static', filename='script/script.js')}}"></script>
+  <meta name="description" content="A page about Latin, myself, and other thingys.">
+  <meta name="keywords" content="Latin, Colin, Daugherty, Cool Stuffs">
+</head>
+<body>
+  <header><h1><a class="header" href="{{url_for('index')}}">All About <span itemscope itemtype="schema.org/Person">Colin Daugherty</span></a></h1>
+    <nav class="menu">
+      <ul class="mainmenu">
+        <li class="mainmenu"><a href="{{url_for('index')}}">Home</a></li>
+        <li class="mainmenu" id="selected">About</li>
+        <li class="mainmenu"><a href="{{url_for('portfolio')}}">Portfolio</a></li>
+        <li class="mainmenu"><a href="{{url_for('game')}}">Game</a></li>
+        <li class="mainmenu"><a href="{{url_for('readings')}}" onmouseover="unhide()" onmouseout="rehide()">List of Books I be Reading!</a>
+
+        <ul class="hiddenlist" id="test" onmouseover="unhide()" onmouseout="rehide()">
+          <li><a href="#" onclick="unhide()">The List</a></li>
+          <br>
+          <li><a href="{{url_for('aenied')}}">The Aenied by Virgil</a></li>
+          <li><a href="{{url_for('odyssey')}}">The Odyssey by Homer</a></li>
+          <li><a href="{{url_for('iliad')}}">The Iliad by Homer</a></li>
+          <li><a href="{{url_for('night')}}">Night by Elie Wiesel</a></li>
+          <br>
+          <li><a href="{{url_for('donquixote')}}">Don Quixote by Cervantes</a></li>
+        </ul>
+
+        </li>
+      </ul>
+    </nav>
+</header>
+
+  <main>
+
+    <p>Ok, now where to begin... I'll start with my name I guess. Hi there! My name is
+    <span itemscope itemtype="schema.org/Person">Colin Daugherty</span>, and I am a teenager who is learning how to code lots of stuffs. My interests include playing games with friends, sports,
+    <span itemscope itemtype="schema.org/Organization">Bible Bowl</span>, and of course coding. Now some history...</p>
+
+    <p>My family came from the (kinda) little
+    <span itemscope itemtype="schema.org/Location">island of Ireland</span>!
+    So yeah, there was once a clan that was called the
+    <span itemscope itemtype="schema.org/familyName">O'Dochartaigh</span> clan of
+    <span itemscope itemtype="schema.org/Location">Ireland</span>.
+     This clan was pretty awesome (at least they were to me) always having fun in their castles and sacking little towns that annoy them. Yeah sorry to all the people whose ancestors are from the little   <span itemscope itemtype="schema.org/Location">town of Dairy, Ireland</span>.
+    They may have been attacked at some point. I have no idea by who though.</p>
+
+    <p><h4>CASTLES!!!</h4>Yep castles. This is the one thing that I am always so excited to talk about. So where to begin... It is rumored that there are still around four castles left in Ireland that used to belong to the O'Dochartaigh clan. One of them that I know for sure is still around is the Castle of Carrickabraghy. This castle is pretty old, being first mentioned in the year of 834 AD. It is located towards the top of the island of Ireland, in the area known as The Isle of Doagh. It is a very cool castle and I even have some pictures to show you how cool it is.</p>
+  <picture>
+    <source
+    media="(orientation: portrait)"
+    srcset="img/castlesmaller.jpg"
+     />
+      <img class="bodywidth" src="http://curiousireland.ie/wp-content/uploads/2012/08/IMG_7764.jpg" alt="A small piece of the castle on top of a rocky hill, is overlooking the ocean"></img>
+  </picture>
+
+  </main>
+
+  <nav class="menu">
+    <ul class="mainmenu">
+      <li class="mainmenu"><a href="/">Home</a></li>
+      <li class="mainmenu" id="selected">About</li>
+      <li class="mainmenu"><a href="/portfolio">Portfolio</a></li>
+      <li class="mainmenu"><a href="/readings">List of Books I be Reading!</a></li>
+    </ul>
+    <p class="copyright">This is copyrighted by Colin. In the year of <a id="date?" class="wierddate" title="I really hope you don't believe this. If you do, you are either in the future or just want to believe in impossible things. The actual time this webpage was made was in the year of 2015. Fun eh?" href="#date?">12345</a>. &copy 12345 All Rights Reserved</p>
+  </nav>
+</body>
+</html>

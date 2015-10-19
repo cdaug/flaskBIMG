@@ -1,0 +1,38 @@
+{% set menu = 'main' %}
+{% set selected = 'about' %}
+{% extends "base.html" %}
+{% block title %}- Tic Tac Toe{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <main>
+
+    <hr>
+    <div class="messageboard">Placeholder</div>
+    <hr>
+    <p class="bodywidth">Press 'R' at anytime to reload the page.</p>
+    <div id="gameBoard">
+      <img class="square1" src="{{url_for('static', filename='img/blank.png')}}" width="125px" height="125px" data-x=0 data-y=0></img>
+      <img class="square2" src="{{url_for('static', filename='img/blank.png')}}" width="125px" height="125px" data-x=1 data-y=0></img>
+      <img class="square3" src="{{url_for('static', filename='img/blank.png')}}" width="125px" height="125px" data-x=2 data-y=0></img>
+      <br>
+      <img class="square4" src="{{url_for('static', filename='img/blank.png')}}" width="125px" height="125px" data-x=0 data-y=1></img>
+      <img class="square5" src="{{url_for('static', filename='img/blank.png')}}" width="125px" height="125px" data-x=1 data-y=1></img>
+      <img class="square6" src="{{url_for('static', filename='img/blank.png')}}" width="125px" height="125px" data-x=2 data-y=1></img>
+      <br>
+      <img class="square7" src="{{url_for('static', filename='img/blank.png')}}" width="125px" height="125px" data-x=0 data-y=2></img>
+      <img class="square8" src="{{url_for('static', filename='img/blank.png')}}" width="125px" height="125px" data-x=1 data-y=2></img>
+      <img class="square9" src="{{url_for('static', filename='img/blank.png')}}" width="125px" height="125px" data-x=2 data-y=2></img>
+    </div>
+
+  </main>
+{% endblock %}
+{% block footer %}
+  {{ super() }}
+  <script src="{{url_for('static', filename='script/eventemitter2.js')}}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.0/lodash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/velocity/1.2.2/velocity.min.js"></script>
+  <script src="{{url_for('static', filename='script/tictactoe.js')}}"></script>
+{% endblock %}

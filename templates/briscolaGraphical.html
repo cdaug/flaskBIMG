@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Colin Site</title>
+  <link rel="stylesheet" href="colinsite.css">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat|Lato:400,700,400italic,900' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.0/lodash.min.js"></script>
+  <script src="briscolaGraphical.js"></script>
+  <script src="../script/script.js"></script>
+  <meta name="description" content="A page about Latin, myself, and other thingys.">
+  <meta name="keywords" content="Latin, Colin, Daugherty, Cool Stuffs">
+</head>
+<body>
+  <header><h1>All About <span itemscope itemtype="http://schema.org/Person"><span itemprop="givenName">Colin</span> <span itemprop="familyName">Daugherty</span></span></h1>
+  <nav class="menu">
+    <ul class="mainmenu">
+      <li class="mainmenu" id="selected">Home</li>
+      <li class="mainmenu"><a href="about.html">About</a></li>
+      <li class="mainmenu"><a href="portfolio.html">Portfolio</a></li>
+      <li class="mainmenu"><a href="readings.html" onmouseover="unhide()" onmouseout="rehide()">List of Books I be Reading!</a>
+
+      <ul class="hiddenlist" id="test" onmouseover="unhide()" onmouseout="rehide()">
+        <li><a href="#" onclick="unhide()">The List</a></li>
+        <br>
+        <li><a href="books/aeniedvirgil.html">The Aenied by Virgil</a></li>
+        <li><a href="books/odysseyhomer.html">The Odyssey by Homer</a></li>
+        <li><a href="books/iliadhomer.html">The Iliad by Homer</a></li>
+        <li><a href="books/nightwiesel">Night by Elie Wiesel</a></li>
+        <br>
+        <li><a href="books/quixotecervantes.html">Don Quixote by Cervantes</a></li>
+      </ul>
+
+      </li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <p class="scoreOne"></p>
+  <p class="scoreTwo"></p>
+  <div id="messageboard"></div>
+  <br>
+  <img src="img/backofbriscolacard.jpg" height="215">
+  <img src="img/backofbriscolacard.jpg" height="215">
+  <img src="img/backofbriscolacard.jpg" height="215">
+  <br>
+  <br>
+  <img class="playerTwoPlayerCard" height="125" width="75"><img class="trump" src="img/backofbriscolacard.jpg" height="125"><img class="playerOnePlayerCard" height="125" width="75">
+  <br>
+  <br>
+  <div class="cards">
+  <img class="card1" src="img/backofbriscolacard.jpg" data-id=0 height="215">
+  <img class="card2" src="img/backofbriscolacard.jpg" data-id=0 height="215">
+  <img class="card3" src="img/backofbriscolacard.jpg" data-id=0 height="215">
+  </div>
+  <button class="getCards">Start Game</button>
+  <br>
+</main>
+
+</body>
+</html>

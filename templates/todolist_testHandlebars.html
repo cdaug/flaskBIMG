@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Colin Site Tests</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='colinsite.css')}}">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat|Lato:400,700,400italic,900' rel='stylesheet' type='text/css'>
+  <meta name="description" content="A page about Latin, myself, and other thingys.">
+  <meta name="keywords" content="Latin, Colin, Daugherty, Cool Stuffs">
+</head>
+<body>
+  <p>This is a test.</p>
+
+  <script id="entry-template" type="text/x-handlebars-template">
+    <div class="entry">
+      <h1>{{title}}</h1>
+      <div class="body">
+        {{body}}
+      </div>
+    </div>
+  </script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
+</body>

@@ -1,0 +1,22 @@
+{% set menu = 'main' %}
+{% extends "base.html" %}
+{% block title %}- Login{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <main>
+    <form action="" method="post">
+      <label for="POST-username">Username:</label>
+      <input id="POST-username" type="text" name="username" autofocus="true" placeholder="Username">
+      <br>
+      <label for="POST-password">Password:</label>
+      <input id="POST-password" type="text" name="password" autofocus="true" placeholder="Password">
+      <br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </main>
+{% endblock %}
+{% block footer %}
+  <p class="copyright">This is copyrighted by Colin. In the year of <a id="date?" class="wierddate" title="I really hope you don't believe this. If you do, you are either in the future or just want to believe in impossible things. The actual time this webpage was made was in the year of 2015. Fun eh?" href="#date?">12345</a>. &copy 12345 All Rights Reserved</p>
+{% endblock %}

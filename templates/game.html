@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Colin Site</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='colinsite.css')}}">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat|Lato:400,700,400italic,900' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.0/lodash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/velocity/1.2.2/velocity.min.js"></script>
+  <!--<script src="briscolaGraphical.js"></script>-->
+  <script src="{{url_for('static', filename='script/briscolaGraphicalAndText.js')}}"></script>
+  <script src="{{url_for('static', filename='script/script.js')}}"></script>
+  <meta name="description" content="A page about Latin, myself, and other thingys.">
+  <meta name="keywords" content="Latin, Colin, Daugherty, Cool Stuffs">
+</head>
+<body>
+  <header><h1><a class="header" href="{{url_for('index')}}">All About <span itemscope itemtype="schema.org/Person">Colin Daugherty</span></a></h1>
+    <nav class="menu">
+      <ul class="mainmenu">
+        <li class="mainmenu"><a href="{{url_for('index')}}">Home</li>
+        <li class="mainmenu"><a href="{{url_for('about')}}">About</a></li>
+        <li class="mainmenu"><a href="{{url_for('portfolio')}}">Portfolio</a></li>
+        <li class="mainmenu" id="selected">Game</a></li>
+        <li class="mainmenu"><a href="{{url_for('readings')}}" onmouseover="unhide()" onmouseout="rehide()">List of Books I be Reading!</a>
+
+          <ul class="hiddenlist" id="test" onmouseover="unhide()" onmouseout="rehide()">
+            <li><a href="#" onclick="unhide()">The List</a></li>
+            <br>
+            <li><a href="{{url_for('aenied')}}">The Aenied by Virgil</a></li>
+            <li><a href="{{url_for('odyssey')}}">The Odyssey by Homer</a></li>
+            <li><a href="{{url_for('iliad')}}">The Iliad by Homer</a></li>
+            <li><a href="{{url_for('night')}}">Night by Elie Wiesel</a></li>
+            <br>
+            <li><a href="{{url_for('donquixote')}}">Don Quixote by Cervantes</a></li>
+          </ul>
+
+        </li>
+      </ul>
+    </nav>
+</header>
+<main>
+  <p class="scoreOne"></p>
+  <p class="scoreTwo"></p>
+  <div class="messageboard"></div>
+  <div class="bodywidth">---------------------------------------------------------------------------------------------------------------------------------------------------</div>
+  <br>
+  <img class="card4" src="{{url_for('static', filename='img/backofbriscolacard.jpg')}}" data-id=0 height="175">
+  <img class="card5" src="{{url_for('static', filename='img/backofbriscolacard.jpg')}}" data-id=0 height="175">
+  <img class="card6" src="{{url_for('static', filename='img/backofbriscolacard.jpg')}}" data-id=0 height="175">
+  <br>
+  <br>
+  <img class="playerTwoPlayerCard" height="125" width="75"><img class="trump" src="{{url_for('static', filename='img/backofbriscolacard.jpg')}}" data-id=0 height="125"><img class="playerOnePlayerCard" height="125" width="75">
+  <br>
+  <br>
+  <div class="cards">
+  <img class="card1" src="{{url_for('static', filename='img/backofbriscolacard.jpg')}}" data-id=0 height="175">
+  <img class="card2" src="{{url_for('static', filename='img/backofbriscolacard.jpg')}}" data-id=0 height="175">
+  <img class="card3" src="{{url_for('static', filename='img/backofbriscolacard.jpg')}}" data-id=0 height="175">
+  </div>
+  <button id="getCards">Start Game</button>
+  <br>
+</main>
+
+</body>
+</html>

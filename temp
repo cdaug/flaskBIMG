@@ -1,0 +1,27 @@
+{% if selected == 'aenied' %}
+  <li class="bookmenu"><a href="{{url_for('readings')}}">Go Back</a></li>
+  <li class="bookmenu" id="selected">Aenied by Virgil</li>
+{% else %}
+  <li class="bookmenu"><a href="{{url_for('readings')}}">Go Back</a></li>
+  <li class="bookmenu"><a href="{{url_for('aenied')}}">The Aenied by Virgil</a></li>
+{% endif %}
+{% if selected == 'iliad' %}
+  <li class="bookmenu" id="selected">Iliad by Homer</li>
+{% else %}
+  <li class="bookmenu"><a href="{{url_for('iliad')}}">Iliad by Homer</a></li>
+{% endif %}
+{% if selected == 'odyssey' %}
+  <li class="bookmenu" id="selected">The Odyssey by Homer</li>
+{% else %}
+  <li class="bookmenu"><a href="{{url_for('odyssey')}}">The Odyssey by Homer</a></li>
+{% endif %}
+{% if selected == 'night' %}
+  <li class="bookmenu" id="selected">Night by Wiesel</li>
+{% else %}
+  <li class="bookmenu"><a href="{{url_for('night')}}">Night by Wiesel</a></li>
+{% endif %}
+{% if selected == 'quixote' %}
+  <li class="bookmenu" id="selected">Don Quixote by Cervantes</li>
+{% else %}
+  <li class="bookmenu"><a href="{{url_for('donquixote')}}">Don Quixote by Cervantes</a></li>
+{% endif %}

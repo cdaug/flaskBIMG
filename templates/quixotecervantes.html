@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Colin Page-- Readings</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='colinsite.css')}}">
+</head>
+<body>
+  <header><h1><a class="header" href="{{url_for('index')}}">All About <span itemscope itemtype="schema.org/Person">Colin Daugherty</span></a></h1>
+  <nav>
+    <ul class="bookmenu">
+      <li class="bookmenu"><a href="{{url_for('readings')}}">Go Back</a></li>
+      <li class="bookmenu"><a href="{{url_for('iliad')}}">Iliad by Homer</a></li>
+      <li class="bookmenu"><a href="{{url_for('odyssey')}}">The Odyssey by Homer</a></li>
+      <li class="bookmenu"><a href="{{url_for('night')}}">Night by Wiesel</a></li>
+      <li class="bookmenu" id="selected">Don Quixote by Cervantes</li>
+      <li class="bookmenu"><a href="{{url_for('aenied')}}">The Aenied by Virgil</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main>
+
+    <h3>Don Quixote, by Miguel de Cervantes</h3>
+    <p>If you do not like long books... This one is not for you. Unfortunately this is a very long book at somewhere around one thousand pages long. It however is a really really funny book. You may have heard the expression "tilting at windmills" before. Yeah that came from this book. It means doing something that looks brave but is incrediably foolish. This is what Don Quixote did when he mistook a bunch of windmills for a horde of giants. Pretending to be the knight that he really is not, he charged these windmills and hit them with his lance. Unfortunately for him, the force of the hit impacted him so hard that it knocked him of his horse and caused his horse to fall over.</p>
+
+    <p>My verdict is that this is a very funny book, but requires lots of determination to read. Thankfully Cervantes allows this to be easier by making it very funny. So yeah, <strong>ten out of ten. Thanks Cervantes.</strong></p>
+
+    <p><span itemscope itemtype="schema.org/BuyAction">You can get this book off of Amazon <a href="http://www.amazon.com/Don-Quixote-Miguel-Cervantes/dp/0060934344/ref=sr_1_1?s=books&ie=UTF8&qid=1432314979&sr=1-1&keywords=don+quixote">here.</a></span>
+
+      <nav class="menu">
+        <ul class="mainmenu">
+          <li class="mainmenu"><a href="../index.html">Home</a></li>
+          <li class="mainmenu"><a href="../about.html">About</a></li>
+          <li class="mainmenu"><a href="../portfolio.html">Portfolio</a></li>
+          <li class="mainmenu" id="selected">List of Books I be Reading!</li>
+        </ul>
+        <p class="copyright">This is copyrighted by Colin. In the year of <a class="wierddate" title="I really hope you don't believe this. If you do, you are either in the future or just want to believe in impossible things." href="#">12345</a>. &copy 12345 All Rights Reserved</p>
+      </nav>
+
+  </main>

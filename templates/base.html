@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <title>Colin Site{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='colinsite.css')}}">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat|Lato:400,700,400italic,900' rel='stylesheet' type='text/css'>
+    <script src="https://use.fonticons.com/19d37d2e.js"></script>
+    <meta name="description" content="A page about Latin, myself, and other thingys.">
+    <meta name="keywords" content="Latin, Colin, Daugherty, Cool Stuffs">
+    {% endblock %}
+</head>
+<body>
+    {% block mainmenu %}
+    {% if selected != 'home' %}
+      <header><h1><a class="header" href="{{url_for('index')}}">All About <span itemscope itemtype="http://schema.org/Person"><span itemprop="givenName">Colin</span> <span itemprop="familyName">Daugherty</span></span></a></h1>
+    {% else %}
+      <header><h1>All About <span itemscope itemtype="http://schema.org/Person"><span itemprop="givenName">Colin</span> <span itemprop="familyName">Daugherty</span></span></h1>
+    {% endif %}
+      <nav class="menu">
+        <ul class="mainmenu">
+          <div class="login"><a href="{{url_for('login')}}">Login</a></div>
+          {% if selected == 'home' %}
+            <li class="mainmenu" id="selected">Home</li>
+          {% elif menu == 'main' %}
+            <li class="mainmenu"><a href="{{url_for('index')}}">Home</a></li>
+          {% endif %}
+          {% if selected == 'about' %}
+            <li class="mainmenu" id="selected">About</li>
+          {% elif menu == 'main' %}
+            <li class="mainmenu"><a href="{{url_for('about')}}">About</a></li>
+          {% endif %}
+          {% if selected == 'portfolio' %}
+            <li class="mainmenu" id="selected">Portfolio</a></li>
+          {% elif menu == 'main' %}
+            <li class="mainmenu"><a href="{{url_for('portfolio')}}">Portfolio</a></li>
+          {% endif %}
+          {% if selected == 'game' %}
+            <li class="mainmenu" id="selected">Game</a></li>
+          {% elif menu == 'main' %}
+            <li class="mainmenu"><a href="{{url_for('briscola')}}">Game</a></li>
+          {% endif %}
+          {% if selected == 'readings' %}
+            <li class="mainmenu" id="selected">List of Books I be Reading!</li>
+          {% elif menu == 'main' %}
+            <li class="mainmenu"><a href="{{url_for('readings')}}" onmouseover="unhide()" onmouseout="rehide()">List of Books I be Reading!</a>
+          {% endif %}
+          {% if selected == 'todo' %}
+            <li class="mainmenu" id="selected">Todolist</li>
+          {% elif menu == 'main' %}
+            <li class="mainmenu"><a href="{{url_for('todo')}}">Todolist</a></li>
+          {% endif %}
+          {% if selected == 'aenied' %}
+            <li class="bookmenu"><a href="{{url_for('readings')}}">Go Back</a></li>
+            <li class="bookmenu" id="selected">Aenied by Virgil</li>
+          {% elif menu == 'book' %}
+            <li class="bookmenu"><a href="{{url_for('readings')}}">Go Back</a></li>
+            <li class="bookmenu"><a href="{{url_for('aenied')}}">The Aenied by Virgil</a></li>
+          {% endif %}
+          {% if selected == 'iliad' %}
+            <li class="bookmenu" id="selected">Iliad by Homer</li>
+          {% elif menu == 'book' %}
+            <li class="bookmenu"><a href="{{url_for('iliad')}}">Iliad by Homer</a></li>
+          {% endif %}
+          {% if selected == 'odyssey' %}
+            <li class="bookmenu" id="selected">The Odyssey by Homer</li>
+          {% elif menu == 'book' %}
+            <li class="bookmenu"><a href="{{url_for('odyssey')}}">The Odyssey by Homer</a></li>
+          {% endif %}
+          {% if selected == 'night' %}
+            <li class="bookmenu" id="selected">Night by Wiesel</li>
+          {% elif menu == 'book' %}
+            <li class="bookmenu"><a href="{{url_for('night')}}">Night by Wiesel</a></li>
+          {% endif %}
+          {% if selected == 'quixote' %}
+            <li class="bookmenu" id="selected">Don Quixote by Cervantes</li>
+          {% elif menu == 'book' %}
+            <li class="bookmenu"><a href="{{url_for('donquixote')}}">Don Quixote by Cervantes</a></li>
+          {% endif %}
+
+            <ul class="hiddenlist" id="test" onmouseover="unhide()" onmouseout="rehide()">
+              <li><a href="#" onclick="unhide()">The List</a></li>
+              <br>
+              <li><a href="{{url_for('aenied')}}">The Aenied by Virgil</a></li>
+              <li><a href="{{url_for('odyssey')}}">The Odyssey by Homer</a></li>
+              <li><a href="{{url_for('iliad')}}">The Iliad by Homer</a></li>
+              <li><a href="{{url_for('night')}}">Night by Elie Wiesel</a></li>
+              <br>
+              <li><a href="{{url_for('donquixote')}}">Don Quixote by Cervantes</a></li>
+            </ul>
+
+          </li>
+        </ul>
+      </nav>
+    </header>
+    {% endblock %}
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+        {% block footer %}
+        <nav class="menu">
+          <ul class="mainmenu">
+            {% if selected == 'home' %}
+              <li class="mainmenu" id="selected">Home</li>
+            {% else %}
+              <li class="mainmenu"><a href="{{url_for('index')}}">Home</a></li>
+            {% endif %}
+            {% if selected == 'about' %}
+              <li class="mainmenu" id="selected">About</li>
+            {% else %}
+              <li class="mainmenu"><a href="{{url_for('about')}}">About</a></li>
+            {% endif %}
+            {% if selected == 'portfolio' %}
+              <li class="mainmenu" id="selected">Portfolio</a></li>
+            {% else %}
+              <li class="mainmenu"><a href="{{url_for('portfolio')}}">Portfolio</a></li>
+            {% endif %}
+            {% if selected == 'game' %}
+              <li class="mainmenu" id="selected">Game</a></li>
+            {% else %}
+              <li class="mainmenu"><a href="{{url_for('briscola')}}">Game</a></li>
+            {% endif %}
+            {% if selected == 'readings' %}
+              <li class="mainmenu" id="selected">List of Books I be Reading!</li>
+            {% else %}
+              <li class="mainmenu"><a href="{{url_for('readings')}}">List of Books I be Reading!</a></li>
+            {% endif %}
+            {% if selected == 'todo' %}
+              <li class="mainmenu" id="selected">Todolist</li>
+            {% else %}
+              <li class="mainmenu"><a href="{{url_for('todo')}}">Todolist</a></li>
+            {% endif %}
+          </ul>
+          <p class="copyright">This is copyrighted by Colin. In the year of <a id="date?" class="wierddate" title="I really hope you don't believe this. If you do, you are either in the future or just want to believe in impossible things. The actual time this webpage was made was in the year of 2015. Fun eh?" href="#date?">12345</a>. &copy 12345 All Rights Reserved</p>
+        </nav>
+        <script src="{{url_for('static', filename='script/pace.min.js')}}"></script>
+        <script src="{{url_for('static', filename='script/script.js')}}"></script>
+        {% endblock %}
+    </div>
+</body>
+</html>

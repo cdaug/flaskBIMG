@@ -1,0 +1,162 @@
+{% set menu = 'main' %}
+{% set selected = 'home' %}
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <main>
+    <div class="bodywidth">
+      <h2 class="subheader">Colin is showing how much Latin he knows!!!</h2>
+    </div>
+
+      <div id="featuredparagraph"><p class="bodywidth">Now Colin will show off just how much Latin he knows... Salve! Mei nomen est Colin Daugherty. Amo ambulare me canis. Yeah, I'm done with that now. I don't even now if I said what I think I said. I need to review some. Hopefully that says that my name is Colin Daugherty and I like to walk with my dog. Not that my name is Colin and I like to rob places with my dog. I mean come on, if that was true, it would have to be with my cat. My dog is just to happy to see people to be able to rob banks. My cat is the stealthy one of the animals. Now I shall show another really cool power. The power of copy and paste. Lorem ipsum dolor sit amet consectetur adipiscing elit. Curabitur feugiat feugiat purus. Aenean eu metus. Nulla facilisi. Pellentesque quis justo vel massa suscipit sagittis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Quisque mollis, justo vel rhoncus aliquam, urna tortor varius lacus, ut tincidunt metus arcu vel lorem. Praesent metus orci, adipiscing eget, fermentum ut, pellentesque non, dui. Sed sagittis, metus a semper dictum, sem libero sagittis nunc, vitae adipiscing leo neque vitae tellus. Duis quis orci quis nisl nonummy dapibus. Etiam ante. Phasellus imperdiet arcu at odio. In hac habitasse platea dictumst. Aenean metus. Quisque a nibh. Morbi mattis ullamcorper ipsum. Nullam odio urna, feugiat sed, bibendum sed, vulputate in, magna. Nulla tortor justo, convallis iaculis, porta condimentum, interdum nec, arcu. Proin lectus purus, vehicula et, cursus ut, nonummy et, diam.</p></div>
+
+  <div itemscope itemtype ="http://schema.org/Language">
+    <div class="bodywidth">
+      <h1 class="subheader">The Latin Verb</h1>
+      <h4 class="subheader">(If you want to quiz yourself click the lists to make them disappear.)</h4>
+
+      <h2 class="subheader">Active</h2>
+
+      <div class="latinverb">
+        <ul onclick="hideAnything(this)" class="latin">
+          <li class="latin"><strong>Present</strong></li>
+          <li class="latin">amo</li>
+          <li class="latin">amas</li>
+          <li class="latin">amat</li>
+          <li class="latin">amamus</li>
+          <li class="latin">amatis</li>
+          <li class="latin">amant</li>
+        </ul>
+
+        <ul onclick="hideAnything(this)" class="latin">
+          <li class="latin"><strong>Imperfect</strong></li>
+          <li class="latin">amabam</li>
+          <li class="latin">amabas</li>
+          <li class="latin">amabat</li>
+          <li class="latin">amabamus</li>
+          <li class="latin">amabatis</li>
+          <li class="latin">amabant</li>
+        </ul>
+
+        <ul onclick="hideAnything(this)" class="latin">
+          <li class="latin"><strong>Future</strong></li>
+          <li class="latin">amabo</li>
+          <li class="latin">amabis</li>
+          <li class="latin">amabit</li>
+          <li class="latin">amabimus</li>
+          <li class="latin">amabitis</li>
+          <li class="latin">amabunt</li>
+        </ul>
+      </div>
+
+      <div class="latinverb">
+        <ul onclick="hideAnything(this)" class="latin">
+          <li class="latin"><strong>Perfect</strong></li>
+          <li class="latin">amavi</li>
+          <li class="latin">amavisti</li>
+          <li class="latin">amavit</li>
+          <li class="latin">amavimus</li>
+          <li class="latin">amavitis</li>
+          <li class="latin">amaverunt</li>
+        </ul>
+
+        <ul onclick="hideAnything(this)" class="latin">
+          <li class="latin"><strong>Pluperfect</strong></li>
+          <li class="latin">amaveram</li>
+          <li class="latin">amaveras</li>
+          <li class="latin">amaverat</li>
+          <li class="latin">amaveramus</li>
+          <li class="latin">amaveratis</li>
+          <li class="latin">amaverant</li>
+        </ul>
+
+        <ul onclick="hideAnything(this)" class="latin">
+          <li class="latin"><strong>Future Perfect</strong></li>
+          <li class="latin">amavero</li>
+          <li class="latin">amaveris</li>
+          <li class="latin">amaverit</li>
+          <li class="latin">amaverimus</li>
+          <li class="latin">amaveritis</li>
+          <li class="latin">amaverint</li>
+        </ul>
+      </div>
+
+      <h2 class="subheader">Passive</h2>
+
+      <div class="latinverb">
+        <ul onclick="hideAnything(this)" class="latin">
+          <li class="latin"><strong>Present</strong></li>
+          <li class="latin">amor</li>
+          <li class="latin">amaris</li>
+          <li class="latin">amatur</li>
+          <li class="latin">amamur</li>
+          <li class="latin">amamini</li>
+          <li class="latin">amantur</li>
+        </ul>
+
+        <ul onclick="hideAnything(this)" class="latin">
+          <li class="latin"><strong>Imperfect</strong></li>
+          <li class="latin">amabar</li>
+          <li class="latin">amabaris</li>
+          <li class="latin">amabatur</li>
+          <li class="latin">amabamur</li>
+          <li class="latin">amabamini</li>
+          <li class="latin">amabantur</li>
+        </ul>
+
+        <ul onclick="hideAnything(this)" class="latin">
+          <li class="latin"><strong>Future</strong></li>
+          <li class="latin">amabor</li>
+          <li class="latin">amaberis</li>
+          <li class="latin">amabitur</li>
+          <li class="latin">amabimur</li>
+          <li class="latin">amabimini</li>
+          <li class="latin">amabuntur</li>
+        </ul>
+      </div>
+
+      <h4 class="subheader">(<em>amatus-a-um</em> and <em>amati-ae-a</em> are always included along with the forms of <em>sum</em>)</h4>
+
+      <div class="latinverb">
+        <ul onclick="hideAnything(this)" class="latin">
+          <li class="latin"><strong>Perfect</strong></li>
+          <li class="latin">amatus-a-um sum</li>
+          <li class="latin">amatus-a-um es</li>
+          <li class="latin">amatus-a-um est</li>
+          <li class="latin">amati-ae-a sumus</li>
+          <li class="latin">amati-ae-a estis</li>
+          <li class="latin">amati-ae-a sunt</li>
+        </ul>
+
+        <ul onclick="hideAnything(this)" class="latin">
+          <li class="latin"><strong>Pluperfect</strong></li>
+          <li class="latin">amatus-a-um eram</li>
+          <li class="latin">eras</li>
+          <li class="latin">erat</li>
+          <li class="latin">amati-ae-a eramus</li>
+          <li class="latin">eratis</li>
+          <li class="latin">erant</li>
+        </ul>
+
+        <ul onclick="hideAnything(this)" class="latin">
+          <li class="latin"><strong>Future Perfect</strong></li>
+          <li class="latin">amatus-a-um ero</li>
+          <li class="latin">eris</li>
+          <li class="latin">erit</li>
+          <li class="latin">amati-ae-a erimus</li>
+          <li class="latin">eritis</li>
+          <li class="latin">erunt</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  </main>
+{% endblock %}
+{% block footer %}
+  {{ super() }}
+{% endblock %}

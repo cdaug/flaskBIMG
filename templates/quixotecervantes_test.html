@@ -1,0 +1,20 @@
+{% set menu = 'book' %}
+{% set selected = 'quixote' %}
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <main>
+    <h3>Don Quixote, by Miguel de Cervantes</h3>
+    <p>If you do not like long books... This one is not for you. Unfortunately this is a very long book at somewhere around one thousand pages long. It however is a really really funny book. You may have heard the expression "tilting at windmills" before. Yeah that came from this book. It means doing something that looks brave but is incrediably foolish. This is what Don Quixote did when he mistook a bunch of windmills for a horde of giants. Pretending to be the knight that he really is not, he charged these windmills and hit them with his lance. Unfortunately for him, the force of the hit impacted him so hard that it knocked him of his horse and caused his horse to fall over.</p>
+
+    <p>My verdict is that this is a very funny book, but requires lots of determination to read. Thankfully Cervantes allows this to be easier by making it very funny. So yeah, <strong>ten out of ten. Thanks Cervantes.</strong></p>
+
+    <p><span itemscope itemtype="schema.org/BuyAction">You can get this book off of Amazon <a href="http://www.amazon.com/Don-Quixote-Miguel-Cervantes/dp/0060934344/ref=sr_1_1?s=books&ie=UTF8&qid=1432314979&sr=1-1&keywords=don+quixote">here.</a></span>
+  </main>
+{% endblock %}
+{% block footer %}
+  {{ super() }}
+{% endblock %}

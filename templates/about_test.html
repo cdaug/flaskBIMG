@@ -1,0 +1,36 @@
+{% set menu = 'main' %}
+{% set selected = 'about' %}
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <main>
+
+    <p>Ok, now where to begin... I'll start with my name I guess. Hi there! My name is
+    <span itemscope itemtype="schema.org/Person">Colin Daugherty</span>, and I am a teenager who is learning how to code lots of stuffs. My interests include playing games with friends, sports,
+    <span itemscope itemtype="schema.org/Organization">Bible Bowl</span>, and of course coding. Now some history...</p>
+
+    <p>My family came from the (kinda) little
+    <span itemscope itemtype="schema.org/Location">island of Ireland</span>!
+    So yeah, there was once a clan that was called the
+    <span itemscope itemtype="schema.org/familyName">O'Dochartaigh</span> clan of
+    <span itemscope itemtype="schema.org/Location">Ireland</span>.
+     This clan was pretty awesome (at least they were to me) always having fun in their castles and sacking little towns that annoy them. Yeah sorry to all the people whose ancestors are from the little   <span itemscope itemtype="schema.org/Location">town of Dairy, Ireland</span>.
+    They may have been attacked at some point. I have no idea by who though.</p>
+
+    <p><h4>CASTLES!!!</h4>Yep castles. This is the one thing that I am always so excited to talk about. So where to begin... It is rumored that there are still around four castles left in Ireland that used to belong to the O'Dochartaigh clan. One of them that I know for sure is still around is the Castle of Carrickabraghy. This castle is pretty old, being first mentioned in the year of 834 AD. It is located towards the top of the island of Ireland, in the area known as The Isle of Doagh. It is a very cool castle and I even have some pictures to show you how cool it is.</p>
+  <picture>
+    <source
+    media="(orientation: portrait)"
+    srcset="img/castlesmaller.jpg"
+     />
+      <img class="bodywidth" src="http://curiousireland.ie/wp-content/uploads/2012/08/IMG_7764.jpg" alt="A small piece of the castle on top of a rocky hill, is overlooking the ocean"></img>
+  </picture>
+
+  </main>
+{% endblock %}
+{% block footer %}
+  {{ super() }}
+{% endblock %}
